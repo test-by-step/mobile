@@ -1,0 +1,14 @@
+{
+    "welcome": "Welcome",
+    "settings": "Settings",
+    "settings-description": "Adjust your local application settings.",
+    "get-started": "Let's get started.",
+    "start-learning": "Start Learning",
+    "start-learning-description": "Add a test from the database using the + button above, or continue your studies below.",
+    "add-test": "Add Test",
+    "find-test": "Find your test",
+    "add-test-description": "Add a test to your study binder",
+    "step-one": "Step One",
+    "step-two": "Step Two",
+    "step-three": "Step Three"
+}

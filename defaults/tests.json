@@ -1,0 +1,24 @@
+[
+    {
+        "org":"CompTIA",
+        "test":"Security+",
+        "description":{
+            "en": "An information technology industry standard test focused on IT security practices and techniques."
+        },
+        "other":["sec+","security+","sec plus","security plus"],
+        "repo":"github.com/test-by-step/test-comptia-secplus",
+        "logo":"comptia-secplus",
+        "index": 0
+    },
+    {
+        "org":"CompTIA",
+        "test":"Network+",
+        "description":{
+            "en": "An information technology industry standard test focused on network operations and maintenance."
+        },
+        "other":["net+","network+","net plus","network plus"],
+        "repo":"github.com/test-by-step/test-comptia-netplus",
+        "logo":"comptia-netplus",
+        "index": 1
+    }
+]
