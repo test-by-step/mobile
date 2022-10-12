@@ -14,6 +14,7 @@ import HelloScreen from './Screens/Hello';
 
 import MainScreen from './Screens/Main';
 import SettingsScreen from './Screens/Settings';
+import StudyBinderScreen from './Screens/StudyBinder';
 
 const Stack = createNativeStackNavigator()
 
@@ -41,6 +42,11 @@ const App = () => {
             name="AddTest"
             component={AddTestScreen}
             options={{ title: 'Add Test' }}
+            />
+          <Stack.Screen 
+            name="StudyBinder"
+            component={StudyBinderScreen}
+            options={{ title: 'Study Binder' }}
             />
           <Stack.Screen 
             name="Hello"

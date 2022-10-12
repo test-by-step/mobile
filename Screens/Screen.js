@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { FlatList, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableHighlight, useColorScheme, View } from 'react-native';
+import { FlatList, RefreshControl, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, TouchableHighlight, useColorScheme, View } from 'react-native';
 import { Colors } from '../res/Colors';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 
@@ -10,7 +10,7 @@ const ScreenComponent = ({children, buttons, title, navigation, color, variant})
 
     const headerButton = (item, index) => {
         return item.action ? 
-            <TouchableHighlight onPress={item.action} key={index} >
+            <TouchableHighlight onPress={item.action} key={index} underlayColor="transparent">
                 <Icon name={item.icon} size={20} color={variantColor} />
             </TouchableHighlight>
         :
@@ -107,25 +107,47 @@ const ListScreen = ({
     header,
     separator,
     data,
+    refreshing,
+    onRefresh,
     renderer
 }) => {
     const isDarkMode = useColorScheme() === 'dark';
+
+    const variantColor = variant === 'light' ? 'ghostwhite' : 'black'
+
     const screenBG = {
         backgroundColor: color
     }
     const screenColor = {
-        color: variant === 'light' ? 'ghostwhite' : 'black'
+        color: variantColor
     }
     const contentColor = {
         color: isDarkMode ? Colors.lighter : Colors.darker,
         backgroundColor: isDarkMode ? Colors.darker : Colors.lighter
     }
 
-    return <ScreenComponent color={color} buttons={buttons} variant={variant} navigation={navigation} title={title}>
+    return <ScreenComponent 
+        color={color} 
+        buttons={buttons} 
+        variant={variant} 
+        navigation={navigation} 
+        title={title}>
 
         <FlatList
             data={data}
             renderItem={renderer}
+            refreshControl={
+                <RefreshControl 
+                    style={{
+                        position: 'absolute',
+                        zIndex: 99
+                    }}
+                    refreshing={refreshing} 
+                    onRefresh={onRefresh}
+                    colors={[contentColor]}
+                    tintColor={contentColor}
+                    progressBackgroundColor={contentColor} />
+            }
             keyExtractor={ item => item.index }
             ItemSeparatorComponent={separator}
             ListHeaderComponent={
@@ -142,6 +164,8 @@ const ListScreen = ({
                             top: -1000,
                             left: 0,
                             right: 0,
+                            zIndex: 0,
+                            elevation: 0
                         }} 
                         />
                     )}
@@ -156,7 +180,8 @@ const Screen = { Scroll: ScrollScreen, List: ListScreen }
 
 const styles = StyleSheet.create({
     screen: {
-        flex: 1
+        flex: 1,
+        backgroundColor: Colors.lighter
     },
     header: {
     },

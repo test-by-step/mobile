@@ -7,12 +7,12 @@ import Screen from './Screen'
 
 const defaultTests = require('../defaults/tests.json')
 
-const AddTestScreen = ({navigation, route}) => {
+const StudyBinderScreen = ({navigation, route}) => {
     const {t} = useTranslation()
 
     const [refreshing, setRefreshing] = useState(false)
 
-    const header = <Header icon='book-open' text={t('find-test')}>{t('add-test-description')}</Header>
+    const header = <Header icon='book' text={t('continue-learning')}>{t('study-binder-description')}</Header>
 
     const renderer = ({item}) => {
         return <ShortTest item={item} />
@@ -24,7 +24,7 @@ const AddTestScreen = ({navigation, route}) => {
 
     return (
         <Screen.List 
-            title={t('add-test')} 
+            title={t('study-binder')} 
             header={header} 
             navigation={navigation} 
             renderer={renderer} 
@@ -37,4 +37,4 @@ const AddTestScreen = ({navigation, route}) => {
 }
 
 
-export default AddTestScreen
+export default StudyBinderScreen

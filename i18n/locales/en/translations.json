@@ -7,8 +7,17 @@
     "start-learning-description": "Add a test from the database using the + button above, or continue your studies below.",
     "add-test": "Add Test",
     "find-test": "Find your test",
-    "add-test-description": "Add a test to your study binder",
+    "add-test-description": "Add a test to your study binder.",
     "step-one": "Step One",
+    "step-one-description": "Add a test to your study binder.",
     "step-two": "Step Two",
-    "step-three": "Step Three"
+    "step-two-description": "View your binder and start studying.",
+    "step-three": "Step Three",
+    "recently-added": "Recently Added",
+    "recently-added-description": "Start studying from your test binder.",
+    "recently-studied": "Recently Studied",
+    "recently-studied-description": "Continue studying from your test binder.",
+    "study-binder": "Study Binder",
+    "continue-learning": "Continue Learning",
+    "study-binder-description": "Continue studying from your binder."
 }
