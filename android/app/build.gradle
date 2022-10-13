@@ -130,6 +130,8 @@ def reactNativeArchitectures() {
 }
 
 android {
+
+    namespace 'com.testbymobile'
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
