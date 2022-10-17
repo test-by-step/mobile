@@ -1,0 +1,13 @@
+[
+    {
+        "org":"CompTIA",
+        "tests":["netplus","secplus","caspplus"],
+        "description":{
+            "en": "An information technology industry standard test focused on IT practices and techniques."
+        },
+        "other":["comptia"],
+        "repo":"github.com/test-by-step/comptia-tests",
+        "logo":"comptia",
+        "index": 0
+    }
+]

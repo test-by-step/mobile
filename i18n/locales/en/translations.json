@@ -13,11 +13,15 @@
     "step-two": "Step Two",
     "step-two-description": "View your binder and start studying.",
     "step-three": "Step Three",
+    "step-three-description": "Test your skills with quiz questions.",
     "recently-added": "Recently Added",
     "recently-added-description": "Start studying from your test binder.",
     "recently-studied": "Recently Studied",
     "recently-studied-description": "Continue studying from your test binder.",
     "study-binder": "Study Binder",
     "continue-learning": "Continue Learning",
-    "study-binder-description": "Continue studying from your binder."
+    "study-binder-description": "Continue studying from your binder.",
+    "quizzes": "Quizzes",
+    "test-knowledge": "Test Your Knowledge",
+    "quizzes-description": "Test your knowledge and how you have learned from the test repositories."
 }

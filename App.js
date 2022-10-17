@@ -13,6 +13,7 @@ import AddTestScreen from './Screens/AddTest';
 import HelloScreen from './Screens/Hello';
 
 import MainScreen from './Screens/Main';
+import QuizzesScreen from './Screens/Quizzes';
 import SettingsScreen from './Screens/Settings';
 import StudyBinderScreen from './Screens/StudyBinder';
 
@@ -48,6 +49,11 @@ const App = () => {
             component={StudyBinderScreen}
             options={{ title: 'Study Binder' }}
             />
+            <Stack.Screen 
+              name="Quizzes"
+              component={QuizzesScreen}
+              options={{ title: 'Quizzes' }}
+              />
           <Stack.Screen 
             name="Hello"
             component={HelloScreen}

@@ -59,6 +59,16 @@ const MainScreen = ({ navigation }) => {
                 {t('step-two-description')}
             </Section>
 
+            <Separator />
+
+            <Section 
+                title={t('step-three')}
+                onPress={() => navigation.navigate('Quizzes')}
+                icon='question'
+            >
+                {t('step-three-description')}
+            </Section>
+
         </Screen.Scroll>
     )
 }

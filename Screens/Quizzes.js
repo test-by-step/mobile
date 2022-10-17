@@ -1,22 +1,22 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import ShortTest from '../Components/list-items/ShortTest'
+import ShortOrg from '../Components/list-items/ShortOrg'
 import Header from '../Components/ui/Header'
 import Separator from '../Components/ui/Separator'
 import Screen from './Screen'
-import TestModel from '../Models/tests/TestsModel'
+import TestsModel from '../Models/tests/TestsModel'
 
-const AddTestScreen = ({navigation, route}) => {
+const QuizzesScreen = ({navigation, route}) => {
     const {t} = useTranslation()
-
-    const testModel = new TestModel()
 
     const [refreshing, setRefreshing] = useState(false)
 
-    const header = <Header icon='book-open' text={t('find-test')}>{t('add-test-description')}</Header>
+    const testsModel = new TestsModel()
+
+    const header = <Header icon='glasses' text={t('test-knowledge')}>{t('quizzes-description')}</Header>
 
     const renderer = ({item}) => {
-        return <ShortTest item={item} />
+        return <ShortOrg item={item} />
     }
 
     const separator = <Separator />
@@ -25,12 +25,12 @@ const AddTestScreen = ({navigation, route}) => {
 
     return (
         <Screen.List 
-            title={t('add-test')} 
+            title={t('quizzes')} 
             header={header} 
             navigation={navigation} 
             renderer={renderer} 
             separator={separator} 
-            data={testModel.getTests()} 
+            data={testsModel.getOrganizations()} 
             refreshing={refreshing} 
             onRefresh={onRefresh} 
             />
@@ -38,4 +38,4 @@ const AddTestScreen = ({navigation, route}) => {
 }
 
 
-export default AddTestScreen
+export default QuizzesScreen
